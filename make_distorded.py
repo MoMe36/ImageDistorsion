@@ -469,7 +469,6 @@ for method_name in d.keys():
             target_name = os.path.join(os.path.dirname(f), target_name)
             
             PILImage.fromarray(corrupted).save(target_name)
-            input()
 
     #     for img, label in zip(test_data.data, test_data.targets):
     #         labels.append(label)
