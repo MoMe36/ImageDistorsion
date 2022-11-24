@@ -453,7 +453,7 @@ simpler_d['Impulse Noise'] = impulse_noise
 
 parser = ArgumentParser()
 parser.add_argument('--p')
-parser.add_argument('--s' action = "store_true")
+parser.add_argument('--s', action = "store_true")
 args = parser.parse_args()
 
 if args.s: 
