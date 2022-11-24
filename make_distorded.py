@@ -443,10 +443,22 @@ d['Gaussian Blur'] = gaussian_blur
 d['Spatter'] = spatter
 d['Saturate'] = saturate
 
+
+simpler_d = collections.OrderedDict()
+simpler_d['Gaussian Noise'] = gaussian_noise
+simpler_d['Shot Noise'] = shot_noise
+simpler_d['Impulse Noise'] = impulse_noise
+
+
+
 parser = ArgumentParser()
 parser.add_argument('--p')
+parser.add_argument('--s' action = "store_true")
 args = parser.parse_args()
 
+if args.s: 
+    print('Using simpler version')
+    d = simpler_d   
 
 files = glob.glob(args.p)
 # test_data = dset.CIFAR10('/share/data/vision-greg/cifarpy', train=False)
